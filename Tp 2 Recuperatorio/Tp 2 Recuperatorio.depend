@@ -1,0 +1,34 @@
+# depslib dependency file v1.0
+1571624698 source:c:\users\pipoca\desktop\tp 2 recuperatorio\inputs.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Inputs.h"
+	<ctype.h>
+	<conio.h>
+
+1571615245 c:\users\pipoca\desktop\tp 2 recuperatorio\inputs.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+
+1571873196 source:c:\users\pipoca\desktop\tp 2 recuperatorio\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1572308884 source:c:\users\pipoca\desktop\tp 2 recuperatorio\arrayemployees.c
+	"ArrayEmployees.h"
+
+1572308691 c:\users\pipoca\desktop\tp 2 recuperatorio\arrayemployees.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Inputs.h"
+
+1572304009 source:c:\users\pipoca\desktop\tp 2 recuperatorio\funcionesmenu.c
+	"funcionesMenu.h"
+
+1572302789 c:\users\pipoca\desktop\tp 2 recuperatorio\funcionesmenu.h
+	"ArrayEmployees.h"
+
