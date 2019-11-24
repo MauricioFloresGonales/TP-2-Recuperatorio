@@ -15,11 +15,7 @@ void harcodeo(eEmployee lista[],int len)
 
     for(i=0;i<len;i++)
     {
-        //lista[i].id = autoId(lista,len);
-
-
         lista[i].id=id[i];
-
         strcpy(lista[i].name,name[i]);
         strcpy(lista[i].lastName,lastName[i]);
         lista[i].salary = salary[i];
@@ -103,52 +99,42 @@ int initEmployees(eEmployee list[], int len)
 }
 
 //----------------------------------------------------------------------------------------------------------------------------------------
-/*
-int agragarEmpleado(eEmployee lista[],int len)
+
+int agragarEmpleado(eEmployee empleados[],int tam)
 {
     int retorno;
     int index;
-
-    index = espacioLibre(lista,len);
-
-    if(index>-1)
+    index=espacioLibre(empleados,tam);
+    if(index!=-1)
     {
-        retorno = addEmployee(lista,len,lista.id,lista.name,lista.lastName,lista.salary,lista.sector);
-        lista[index].isEmpty = NOT_EMPTY;
+        retorno=addEmployee(empleados,tam,&empleados[index].id,empleados[index].name,empleados[index].lastName,&empleados[index].salary,&empleados[index].sector);
+        empleados[index].isEmpty=NOT_EMPTY;
     }
-
+    else
+    {
+        retorno=1;
+    }
     return retorno;
-}*/
+}
 
 
 
 //----------------------------------------------------------------------------------------------------------------------------------------
 
-int addEmployee(eEmployee lista[], int len, int id, char name[],char lastName[],float salary,int sector)
+int addEmployee(eEmployee lista[],int len,int *id,char name[],char lastName[],float *salary,int *sector)
 {
-    eEmployee aux;
     int retorno;
-    int idAux;
 
     if(lista!=NULL && (espacioLibre(lista,len))>-1)
     {
-            idAux = autoId(lista,len,1);
-            while(getString(aux.name,"inngrese el Nombre: ","error el nombre se pasa de los limites\n","error,Solo se pueden ingresar letras",1,51)!=0);
-            while(getString(aux.lastName,"inngrese el Apellido: ","error el nombre se pasa de los limites\n","error,Solo se pueden ingresar letras",1,51)!=0);
-            while(getFloat(&aux.salary,"Ingrese el Salario: ","error,Solo puede ingresar numeros entre [0][1.000.000]\n",1,1000000)!=0);
-            while(getInt(&aux.sector,"ingrese el numero del Sector al que pertenece: ","error,Solo puede ingresar numeros\n",1,999999)!=0);
+            id =(int*) autoId(lista,len,1);
+            while(getString(name,"inngrese el Nombre: ","error el nombre se pasa de los limites\n","error,Solo se pueden ingresar letras",1,51)!=0);
+            while(getString(lastName,"inngrese el Apellido: ","error el nombre se pasa de los limites\n","error,Solo se pueden ingresar letras",1,51)!=0);
+            while(getFloat(salary,"Ingrese el Salario: ","error,Solo puede ingresar numeros entre [0][1.000.000]\n",1,1000000)!=0);
+            while(getInt(sector,"ingrese el numero del Sector al que pertenece: ","error,Solo puede ingresar numeros\n",1,999999)!=0);
+            retorno = confirmar("confirmar","Cancelar");
 
-            printf("%d-%s-%s-%f-%d\n",id,aux.name,aux.lastName,aux.salary,aux.sector);
-
-            if(confirmar("confirmar","Cancelar")==0)
-            {
-                id = idAux;
-                strcpy(name,aux.name);
-                strcpy(lastName,aux.lastName);
-                salary = aux.salary;
-                sector = aux.sector;
-            }
-            retorno = 0;
+         retorno = 0;
 
     }else{
 
@@ -205,7 +191,7 @@ int removeEmployee(eEmployee list[], int len, int id)
 
                 if(confirmar("Confirmar ","Cancelar ")==0)
                 {
-                    list[i].isEmpty== aux.isEmpty;
+                    list[i].isEmpty = aux.isEmpty;
                     retorno = 0;
 
                 }else{
@@ -601,6 +587,13 @@ int informeOrdenar(eEmployee lista[],int len)
     return retorno;
 }
 
-
+void mostrarEmpleados(eEmployee lista[],int len)
+{
+    int i;
+    for(i=0;i<len;i++)
+    {
+        mostrarUnEmpleado(lista,i);
+    }
+}
 
 

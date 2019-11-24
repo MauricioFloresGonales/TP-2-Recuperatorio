@@ -82,7 +82,7 @@ int idMayor(eEmployee lista[],int len,int valMenor);
  * \return int Return (-1) if Error [Invalid length or NULL pointer] - (0) if Ok
  *
  */
-int initEmployees(eEmployee list[], int len);
+int initEmployees(eEmployee[], int len);
 
 //----------------------------------------------------------------------------------------------------------------------------------------
 
@@ -110,7 +110,7 @@ int agragarEmpleado(eEmployee lista[],int len);
  *
  */
 
-int addEmployee(eEmployee list[], int len, int id, char name[],char lastName[],float salary,int sector);
+int addEmployee(eEmployee empleados[],int tam,int *id,char name[],char apellido[],float *salario,int *sector);
 
 //----------------------------------------------------------------------------------------------------------------------------------------
 

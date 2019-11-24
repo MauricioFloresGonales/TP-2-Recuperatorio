@@ -7,7 +7,7 @@
 
 int main()
 {
-    eEmployee empleado;
+    eEmployee empleado[TE];
     int opcion;
     int pasoUno;
     int pasoDos;
@@ -27,7 +27,6 @@ int main()
             harcodeo(empleado,5);
         }
 
-
         switch(opcion)
         {
         case 1:
@@ -45,6 +44,7 @@ int main()
 
             break;
         case 4:
+            mostrarEmpleados(empleado,TE);
             pasoCuatro = informes(empleado,TE);
             break;
         default:
@@ -55,6 +55,5 @@ int main()
     system("cls");
 
     }while(opcion != 7);
-
 
 }
