@@ -249,22 +249,29 @@ void ordenarAfabeticamenteUp(eEmployee list[], int len)
     {
         for(j=i+1;j<len;j++)
         {
-            if(stricmp(list[i].lastName,list[j].lastName)<0)
+            if(list[i].isEmpty==NOT_EMPTY&&list[j].isEmpty==NOT_EMPTY)
             {
-                strcpy(aux.lastName,list[i].lastName);
-                strcpy(list[i].lastName,list[j].lastName);
-                strcpy(list[j].lastName,aux.lastName);
-            }else if(stricmp(list[i].lastName,list[j].lastName)== 0)
-            {
-                if(list[i].sector<list[j].sector)
+                if(stricmp(list[i].lastName,list[j].lastName)<0)
                 {
-                    aux.sector = list[i].sector;
-                    list[i].sector = list[j].sector;
-                    list[j].sector = aux.sector;
+                    strcpy(aux.lastName,list[i].lastName);
+                    strcpy(list[i].lastName,list[j].lastName);
+                    strcpy(list[j].lastName,aux.lastName);
                 }
-
+                else
+                {
+                     if(stricmp(list[i].lastName,list[j].lastName)== 0)
+                     {
+                        if(list[i].sector<list[j].sector)
+                        {
+                            aux = list[i];
+                            list[i] = list[j];
+                            list[j] = aux;
+                        }
+                     }
+                }
             }
         }
+
     }
 }
 
@@ -280,22 +287,26 @@ void ordenarAfabeticamenteDown(eEmployee list[], int len)
     {
         for(j=i+1;j<len;j++)
         {
-            if(stricmp(list[i].lastName,list[j].lastName)>0)
+            if(list[i].isEmpty==NOT_EMPTY&&list[j].isEmpty==NOT_EMPTY)
             {
+                if(stricmp(list[i].lastName,list[j].lastName)>0)
+                {
                 strcpy(aux.lastName,list[i].lastName);
                 strcpy(list[i].lastName,list[j].lastName);
                 strcpy(list[j].lastName,aux.lastName);
 
-            }else if(stricmp(list[i].lastName,list[j].lastName)== 0)
+                }else if(stricmp(list[i].lastName,list[j].lastName)== 0)
                 {
                     if(list[i].sector>list[j].sector)
                     {
-                        aux.sector = list[i].sector;
-                        list[i].sector = list[j].sector;
-                        list[j].sector = aux.sector;
+                        aux = list[i];
+                        list[i] = list[j];
+                        list[j] = aux;
                     }
 
                 }
+            }
+
         }
     }
 }
@@ -419,8 +430,12 @@ void mostrarApellidoSector(eEmployee list[], int len)
         printf("\tApellidos:\tSectores:\n");
         for(i=0;i<len-1;i++)
         {
+            if(list[i].isEmpty == NOT_EMPTY)
+            {
+                printf("\t%10s\t%10d\n",list[i].lastName,list[i].sector);
+            }
 
-            printf("\t%10s\t%10d\n",list[i].lastName,list[i].sector);
+
         }
     }
 }
