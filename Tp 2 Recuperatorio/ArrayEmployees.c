@@ -109,6 +109,7 @@ int agragarEmpleado(eEmployee empleados[],int tam)
     {
         retorno=addEmployee(empleados,tam,&empleados[index].id,empleados[index].name,empleados[index].lastName,&empleados[index].salary,&empleados[index].sector);
         empleados[index].isEmpty=NOT_EMPTY;
+        retorno = 0;
     }
     else
     {

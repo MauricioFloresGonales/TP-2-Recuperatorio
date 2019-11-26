@@ -10,9 +10,6 @@ int main()
     eEmployee empleado[TE];
     int opcion;
     int pasoUno;
-    int pasoDos;
-    int pasoTres;
-    int pasoCuatro;
 
     do{
         printf("1- Alta:\n");
@@ -35,17 +32,22 @@ int main()
 
             break;
         case 2:
+            if(pasoUno==0)
+            {
+                modificarMenu(empleado,TE);
+            }else{
+                printf("todavia no ingreso ningun empleado");
+            }
 
-            pasoDos = modificarMenu(empleado,TE);
 
             break;
         case 3:
-            pasoTres = baja(empleado,TE);
+            baja(empleado,TE);
 
             break;
         case 4:
             mostrarEmpleados(empleado,TE);
-            pasoCuatro = informes(empleado,TE);
+            informes(empleado,TE);
             break;
         default:
             printf("SALIR");

@@ -32,10 +32,10 @@
 1572302789 c:\users\pipoca\desktop\tp 2 recuperatorio\funcionesmenu.h
 	"ArrayEmployees.h"
 
-1574639384 source:c:\users\pipoca\desktop\tp-2-recuperatorio\tp 2 recuperatorio\arrayemployees.c
+1574727807 source:c:\users\pipoca\desktop\tp-2-recuperatorio\tp 2 recuperatorio\arrayemployees.c
 	"ArrayEmployees.h"
 
-1574631730 c:\users\pipoca\desktop\tp-2-recuperatorio\tp 2 recuperatorio\arrayemployees.h
+1574727848 c:\users\pipoca\desktop\tp-2-recuperatorio\tp 2 recuperatorio\arrayemployees.h
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -55,7 +55,7 @@
 	<ctype.h>
 	<conio.h>
 
-1574633299 source:c:\users\pipoca\desktop\tp-2-recuperatorio\tp 2 recuperatorio\main.c
+1574727807 source:c:\users\pipoca\desktop\tp-2-recuperatorio\tp 2 recuperatorio\main.c
 	<stdio.h>
 	<stdlib.h>
 	"ArrayEmployees.h"

@@ -275,3 +275,4 @@ int informes(eEmployee[],int len);
 
 int informeOrdenar(eEmployee[],int len);
 
+void mostrarEmpleados(eEmployee lista[],int len);
