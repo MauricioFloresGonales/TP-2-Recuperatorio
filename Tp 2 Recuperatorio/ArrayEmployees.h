@@ -263,16 +263,52 @@ int superanPromedioSalario(eEmployee list[], int len);
  */
 int informeSalario(eEmployee list[], int len);
 
-
-//----------------------------------------------------------------------------------------------------------------------------------------
-//----------------------------------------------------------------------------------------------------------------------------------------
 //----------------------------------------------------------------------------------------------------------------------------------------
 
-
+/** \brief pide ingresar un id y lo elimina (logicamente) del array
+ *
+ * \param eEmployee[]
+ * \param len int
+ * \return int
+ *
+ */
 int baja(eEmployee[],int len);
 
+//----------------------------------------------------------------------------------------------------------------------------------------
+
+/** \brief mustra un menu de opciones:
+    [1] Ordenados alfabeticamente por Apellido y Sector
+    [2] -Total: -Promedio de los salarios
+                -Cuantos empleados superan el salario promedio
+    [3] Cancelar
+ *
+ * \param eEmployee[]
+ * \param len int
+ * \return int
+ *
+ */
 int informes(eEmployee[],int len);
 
+//----------------------------------------------------------------------------------------------------------------------------------------
+
+/** \brief mustra un menu de opciones para Ordenados alfabeticamente por Apellido y Sector segun
+    [0] Mayor a Menor
+    [1] Menor a Mayor
+ *
+ * \param eEmployee[]
+ * \param len int
+ * \return int
+ *
+ */
 int informeOrdenar(eEmployee[],int len);
 
+//----------------------------------------------------------------------------------------------------------------------------------------
+
+/** \brief muestra el contenido del array
+ *
+ * \param lista[] eEmployee
+ * \param len int
+ * \return void
+ *
+ */
 void mostrarEmpleados(eEmployee lista[],int len);

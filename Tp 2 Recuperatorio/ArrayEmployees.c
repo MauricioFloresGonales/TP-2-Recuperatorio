@@ -7,7 +7,7 @@ void harcodeo(eEmployee lista[],int len)
 
     int id[]={1,2,3,4,5};
 
-    char name[][51]={"a","c","d","b","e"};//{"ana","juan","pepe","laura","mauricio"};
+    char name[][51]={"ana","camilo","daniel","barbara","elias"};//{"ana","juan","pepe","laura","mauricio"};
     char lastName[][51] = {"catunta","grillo","argento","cordoba","gonzales"};
     float salary[] = {100,200,300,400,500};
     int sector[] = {1,2,3,1,2};
@@ -597,7 +597,7 @@ int informeOrdenar(eEmployee lista[],int len)
 {
     int opcion;
     int retorno;
-    while(getInt(&opcion,"Ordenados alfabeticamente por Apellido y Sector\n[0] Mayor a Menor\[1] Menor a Mayor\nOpcion: ","Error,Solo puede ingresar [0]o[1]",0,1)!=0);
+    while(getInt(&opcion,"Ordenados alfabeticamente por Apellido y Sector\n[0] Mayor a Menor\n[1] Menor a Mayor\nOpcion: ","Error,Solo puede ingresar [0]o[1]",0,1)!=0);
     retorno = sortEmployees(lista,len,opcion);
 
     return retorno;
